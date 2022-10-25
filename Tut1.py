@@ -10,9 +10,9 @@ def home():
 def users(name):
     return f"Hello {name} !"
 
-@app.route('/admin')
+@app.route('/admin/')
 def admin():
-    redirect(url_for("home"))
+    return redirect(url_for("users",name="edmin"))
 
 if __name__ == '__main__':
     app.run()
